@@ -6,10 +6,7 @@ elev::elev()
 
     //ctor'
 }
-elev::elev(string p,string n) : person(p,n){
-    pnm=p;
-    nam=n;
-}
+elev::elev(string p,string n) : person(p,n){};
 
 elev::~elev()
 {

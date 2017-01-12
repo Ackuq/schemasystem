@@ -3,14 +3,17 @@
 
 #include <vector>
 #include "elev.h"
+#include "larare.h"
 
 class kurs
 {
     protected:
         vector<elev> elever;
+    public:
+        larare* Larare;
 
         string kursnamn;
-    public:
+
         kurs();
         kurs(string k){
             kursnamn = k;
@@ -20,13 +23,16 @@ class kurs
         }
         virtual ~kurs();
         void knamnOut(){
-            cout<<kursnamn<<endl;
+            cout<<"Kurs: "<<kursnamn<<"\t"<<"L\x84rare: "<<Larare->namn<<endl<<endl;
+        }
+        void addLarare(larare* _Larare){
+            Larare = _Larare;
         }
         void kOut(){
             cout<<"Kurs "<<kursnamn<<endl;
             cout<<"Antal Elever i kurs: "<<elever.size()<<endl;
             for (unsigned int i = 0; i<elever.size();i++){
-                elever[i].utElev();
+                elever[i].pOut();
             }
         }
 

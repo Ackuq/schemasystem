@@ -10,15 +10,10 @@ using namespace std;
 class elev : public person
 {
     protected:
-        string pnm;
-        string nam;
+
     public:
         elev();
         elev(string,string);
-        void utElev()
-        {
-            cout<<nam<<endl<<pnm<<endl<<endl;
-        }
         virtual ~elev();
 
 };

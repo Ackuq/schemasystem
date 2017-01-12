@@ -11,9 +11,10 @@ class person
 {
     protected:
         string pnmr;
-        string namn;
 
     public:
+        string namn;
+
         person();
         person(string,string);
         virtual ~person();

@@ -1,105 +1,56 @@
 # depslib dependency file v1.0
-1477481717 source:c:\users\axpe\onedrive\kod 3an\project\schemasystem\src\elev.cpp
-	"elev.h"
-	<string>
-
-1477483243 c:\users\axpe\onedrive\kod 3an\project\schemasystem\include\elev.h
-	<iostream>
-	<string>
-	"person.h"
-
-1478692545 c:\users\axpe\onedrive\kod 3an\project\schemasystem\include\person.h
-	<iostream>
-	<cstdlib>
-
-1477483486 source:c:\users\axpe\onedrive\kod 3an\project\schemasystem\src\person.cpp
-	"person.h"
-
-1479300136 source:c:\users\axpe\onedrive\kod 3an\project\schemasystem\main.cpp
-	<iostream>
-	<string>
-	<cstdlib>
-	<vector>
-	"person.h"
-	"elev.h"
-	"larare.h"
-	"klass.h"
-	"kurs.h"
-
-1476876274 c:\users\axpe\onedrive\kod 3an\project\schemasystem\include\larare.h
-	<iostream>
-	<cstdlib>
-	<vector>
-	"person.h"
-
-1476876274 source:c:\users\axpe\onedrive\kod 3an\project\schemasystem\src\larare.cpp
-	"larare.h"
-	<string>
-
-1479300533 c:\users\axpe\onedrive\kod 3an\project\schemasystem\include\klass.h
-	"elev.h"
-	<vector>
-
-1479300182 source:c:\users\axpe\onedrive\kod 3an\project\schemasystem\src\klass.cpp
-	"klass.h"
-
-1477483164 source:c:\users\axpe\onedrive\kod 3an\project\schemasystem\src\kurs.cpp
-	"kurs.h"
-
-1479300395 c:\users\axpe\onedrive\kod 3an\project\schemasystem\include\kurs.h
-	<vector>
-	"elev.h"
-
-1477481717 source:c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\src\elev.cpp
-	"elev.h"
-	<string>
-
-1477483243 c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\include\elev.h
-	<iostream>
-	<string>
-	"person.h"
-
-1478692545 c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\include\person.h
-	<iostream>
-	<cstdlib>
-
-1479300182 source:c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\src\klass.cpp
-	"klass.h"
-
-1481719329 c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\include\klass.h
-	"elev.h"
-	<vector>
-
-1477483164 source:c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\src\kurs.cpp
-	"kurs.h"
-
-1481720251 c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\include\kurs.h
-	<vector>
-	"elev.h"
-
-1476876274 source:c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\src\larare.cpp
-	"larare.h"
-	<string>
-
-1476876274 c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\include\larare.h
-	<iostream>
-	<cstdlib>
-	<vector>
-	"person.h"
-
-1477483486 source:c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\src\person.cpp
-	"person.h"
-
-1481753175 source:c:\users\axpe\onedrive\documents\kod 3an\project\schemasystem\main.cpp
+1484265065 source:c:\github\schemasystem\main.cpp
 	<iostream>
 	<string>
 	<cstdlib>
 	<vector>
 	<time.h>
 	<algorithm>
+	<sstream>
 	"person.h"
 	"elev.h"
 	"larare.h"
 	"klass.h"
 	"kurs.h"
+
+1484247658 c:\github\schemasystem\include\person.h
+	<iostream>
+	<cstdlib>
+
+1484252522 c:\github\schemasystem\include\elev.h
+	<iostream>
+	<string>
+	"person.h"
+
+1484249775 c:\github\schemasystem\include\larare.h
+	<iostream>
+	<cstdlib>
+	<vector>
+	"person.h"
+
+1484252574 c:\github\schemasystem\include\klass.h
+	"elev.h"
+	<vector>
+
+1484265147 c:\github\schemasystem\include\kurs.h
+	<vector>
+	"elev.h"
+	"larare.h"
+
+1484250138 source:c:\github\schemasystem\src\elev.cpp
+	"elev.h"
+	<string>
+
+1479300182 source:c:\github\schemasystem\src\klass.cpp
+	"klass.h"
+
+1477483164 source:c:\github\schemasystem\src\kurs.cpp
+	"kurs.h"
+
+1484247805 source:c:\github\schemasystem\src\larare.cpp
+	"larare.h"
+	<string>
+
+1484256155 source:c:\github\schemasystem\src\person.cpp
+	"person.h"
 

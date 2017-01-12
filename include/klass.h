@@ -16,9 +16,6 @@ class klass
         {
             klassnamn=k;
         }
-        void addElev(elev Elev){
-            elever.push_back(Elev);
-        }
         ~klass();
         void knamnOut(){
             cout<<klassnamn<<endl;
@@ -27,7 +24,7 @@ class klass
             cout<<"Klass: "<<klassnamn<<endl;
             cout<<"Antal elever i klass: "<<elever.size();
             for (unsigned int i = 0; i<elever.size();i++){
-                elever[i].utElev();
+                elever[i].pOut();
             }
         }
 };

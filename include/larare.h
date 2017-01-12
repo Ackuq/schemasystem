@@ -11,11 +11,11 @@ using namespace std;
 class larare : public person
 {
     protected:
-        vector<string> amnen;
-
+        //vector<string> amnen;
     public:
+        string amne;
         larare();
-        larare(string,string);
+        larare(string,string,string);
         virtual ~larare();
         larare(const larare& other);
     private:
