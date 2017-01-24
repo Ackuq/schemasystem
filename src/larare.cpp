@@ -2,12 +2,6 @@
 #include <string>
 
 
-
-larare::larare()
-{
-    //ctor
-}
-
 larare::larare(string p,string n,string a) : person(p,n){
     amne = a;
 }

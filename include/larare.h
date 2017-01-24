@@ -14,10 +14,10 @@ class larare : public person
         //vector<string> amnen;
     public:
         string amne;
-        larare();
-        larare(string,string,string);
-        virtual ~larare();
         larare(const larare& other);
+        larare(string,string,string);
+
+        virtual ~larare();
     private:
 };
 

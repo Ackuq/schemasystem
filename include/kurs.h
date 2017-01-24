@@ -10,31 +10,15 @@ class kurs
     protected:
         vector<elev> elever;
     public:
-        larare* Larare;
-
+        larare* _larare;
         string kursnamn;
+        kurs(string);
 
-        kurs();
-        kurs(string k){
-            kursnamn = k;
-        }
-        void addElevk(elev Elev){
-            elever.push_back(Elev);
-        }
+        void addElevk(elev);
+        void addLarare(larare*);
+        void knamnOut();
+        void kOut();
         virtual ~kurs();
-        void knamnOut(){
-            cout<<"Kurs: "<<kursnamn<<"\t"<<"L\x84rare: "<<Larare->namn<<endl<<endl;
-        }
-        void addLarare(larare* _Larare){
-            Larare = _Larare;
-        }
-        void kOut(){
-            cout<<"Kurs "<<kursnamn<<endl;
-            cout<<"Antal Elever i kurs: "<<elever.size()<<endl;
-            for (unsigned int i = 0; i<elever.size();i++){
-                elever[i].pOut();
-            }
-        }
 
     private:
 };

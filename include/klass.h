@@ -10,23 +10,12 @@ class klass
         string klassnamn;
     public:
         vector<elev> elever;
+        klass(string);
 
-        klass();
-        klass(string k)
-        {
-            klassnamn=k;
-        }
+        void knamnOut();
+        void kOut();
         ~klass();
-        void knamnOut(){
-            cout<<klassnamn<<endl;
-        }
-        void kOut(){
-            cout<<"Klass: "<<klassnamn<<endl;
-            cout<<"Antal elever i klass: "<<elever.size();
-            for (unsigned int i = 0; i<elever.size();i++){
-                elever[i].pOut();
-            }
-        }
+
 };
 
 #endif // KLASS_H

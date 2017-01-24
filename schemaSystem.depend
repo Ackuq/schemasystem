@@ -1,17 +1,15 @@
 # depslib dependency file v1.0
-1484265065 source:c:\github\schemasystem\main.cpp
+1484780515 source:c:\github\schemasystem\main.cpp
 	<iostream>
 	<string>
 	<cstdlib>
 	<vector>
-	<time.h>
-	<algorithm>
-	<sstream>
 	"person.h"
 	"elev.h"
 	"larare.h"
 	"klass.h"
 	"kurs.h"
+	"schema.h"
 
 1484247658 c:\github\schemasystem\include\person.h
 	<iostream>
@@ -22,17 +20,17 @@
 	<string>
 	"person.h"
 
-1484249775 c:\github\schemasystem\include\larare.h
+1484780398 c:\github\schemasystem\include\larare.h
 	<iostream>
 	<cstdlib>
 	<vector>
 	"person.h"
 
-1484252574 c:\github\schemasystem\include\klass.h
+1484780363 c:\github\schemasystem\include\klass.h
 	"elev.h"
 	<vector>
 
-1484265147 c:\github\schemasystem\include\kurs.h
+1484779642 c:\github\schemasystem\include\kurs.h
 	<vector>
 	"elev.h"
 	"larare.h"
@@ -41,16 +39,38 @@
 	"elev.h"
 	<string>
 
-1479300182 source:c:\github\schemasystem\src\klass.cpp
+1484780342 source:c:\github\schemasystem\src\klass.cpp
 	"klass.h"
 
-1477483164 source:c:\github\schemasystem\src\kurs.cpp
+1484779625 source:c:\github\schemasystem\src\kurs.cpp
 	"kurs.h"
 
-1484247805 source:c:\github\schemasystem\src\larare.cpp
+1484780406 source:c:\github\schemasystem\src\larare.cpp
 	"larare.h"
 	<string>
 
 1484256155 source:c:\github\schemasystem\src\person.cpp
 	"person.h"
+
+1484779707 c:\github\schemasystem\include\lektioner.h
+
+1484778471 c:\github\schemasystem\include\tid.h
+
+1484780765 c:\github\schemasystem\include\schema.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<vector>
+	"kurs.h"
+	"larare.h"
+
+1484784424 source:c:\github\schemasystem\src\schema.cpp
+	"schema.h"
+	<iostream>
+	<string>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<time.h>
+	"kurs.h"
 
