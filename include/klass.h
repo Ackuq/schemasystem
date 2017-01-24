@@ -11,7 +11,6 @@ class klass
     public:
         vector<elev> elever;
         klass(string);
-
         void knamnOut();
         void kOut();
         ~klass();

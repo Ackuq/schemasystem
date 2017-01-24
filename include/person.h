@@ -17,13 +17,14 @@ class person
 
         person();
         person(string,string);
-        virtual ~person();
         person(const person& other);
         void pOut()
         {
             cout<<pnmr;
             cout<<namn;
         }
+        virtual ~person();
+
 };
 
 #endif // PERSON_H

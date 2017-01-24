@@ -1,12 +1,12 @@
 #include "larare.h"
 #include <string>
 
+larare::larare(string p,string n) : person(p,n){}
 
-larare::larare(string p,string n,string a) : person(p,n){
-    amne = a;
+void larare::addKurs(string kurs)
+{
+    kurser.push_back(kurs);
 }
-
-
 
 larare::~larare()
 {

@@ -69,14 +69,27 @@ void schema::displaySchema(vector<kurs*> _lektioner)
 
 vector<kurs*> schema::createLektioner(vector<kurs*> _kurser, vector<kurs*> _lektioner)
 {
-    int currTime = 0;
-    while(currTime<5)
+    int dag = 0;
+    srand(time(NULL));
+    while(dag<5)
     {
-        for(unsigned int i = 0; i<_kurser.size(); i++)
-        {
-            _lektioner.push_back(_kurser[i]);
+        vector<int> used;
+        int lektion = 0;
+        while(lektion<5){
+            int randomIndex = rand()% _kurser.size() + 0;
+            for(int i =0;i<used.size();){
+                if(randomIndex==used[i]){
+                    randomIndex = rand()% _kurser.size() + 0;
+                    i=0;
+                }
+                else
+                    i++;
+            }
+            _lektioner.push_back(_kurser[randomIndex]);
+            used.push_back(randomIndex);
+            lektion++;
         }
-        currTime++;
+        dag++;
     }
     return _lektioner;
 }
@@ -84,14 +97,13 @@ vector<kurs*> schema::createLektioner(vector<kurs*> _kurser, vector<kurs*> _lekt
 
 vector<kurs*> schema::addLarare(vector<kurs*> _lektioner, vector<larare*> _larar)
 {
-    for(unsigned int i = 0; i<_larar.size(); i++)
-    {
-        for(unsigned int j=0; j<_lektioner.size(); j++)
-        {
-            if(_lektioner[j] -> kursnamn == _larar[i] -> amne)
-            {
-                _lektioner[j] -> addLarare(_larar[i]);
-                break;
+    for(unsigned int i=0;i<_lektioner.size();i++){
+        for(unsigned int j=0;j<_larar.size();j++){
+            for(unsigned int z=0; z <_larar[j] -> kurser.size();z++){
+                if(_lektioner[i] -> kursnamn == _larar[j] -> kurser[z]){
+                    _lektioner[i] -> addLarare(_larar[j]);
+                    break;
+                }
             }
         }
     }
