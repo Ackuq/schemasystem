@@ -2,16 +2,25 @@
 #define KLASS_H
 
 #include "elev.h"
+#include "kurs.h"
 #include <vector>
 
 class klass
 {
     protected:
-        string klassnamn;
+        int hh;
+        float mm;
     public:
+        string klassnamn;
+        vector<kurs> lektioner;
         vector<elev> elever;
         klass(string);
-        void knamnOut();
+        void displaySchema();
+        void displayTime();
+        void createLektioner(vector<kurs*>);
+        void shuffle();
+        void shuffleRange(int);
+        void addLarare(vector<larare*>);
         void kOut();
         ~klass();
 

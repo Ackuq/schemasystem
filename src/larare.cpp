@@ -1,7 +1,9 @@
 #include "larare.h"
 #include <string>
 
-larare::larare(string p,string n) : person(p,n){}
+larare::larare(string p,string n) : person(p,n){
+    lek = 0;
+}
 
 void larare::addKurs(string kurs)
 {

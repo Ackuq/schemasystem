@@ -39,14 +39,12 @@
 		<Unit filename="include/kurs.h" />
 		<Unit filename="include/larare.h" />
 		<Unit filename="include/person.h" />
-		<Unit filename="include/schema.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/elev.cpp" />
 		<Unit filename="src/klass.cpp" />
 		<Unit filename="src/kurs.cpp" />
 		<Unit filename="src/larare.cpp" />
 		<Unit filename="src/person.cpp" />
-		<Unit filename="src/schema.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

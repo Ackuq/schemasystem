@@ -6,6 +6,7 @@
 #include <vector>
 #include <sstream>
 #include <time.h>
+#include "klass.h"
 #include "kurs.h"
 
 schema::schema()
@@ -29,17 +30,18 @@ void schema::displayTime()
         s_mm.str("00");
     cout<<s_hh.str()<<":"<<s_mm.str();
 }
-void schema::displaySchema(vector<kurs*> _lektioner)
+void schema::displaySchema(klass _klass)
 {
+    cout<<"Schema f\x94r "<<_klass.klassnamn<<endl;
     unsigned int j=0;
-    for(unsigned int i=0; i<_lektioner.size(); i++)
+    for(unsigned int i=0; i<_klass.lektioner.size(); i++)
     {
         if((j*5)-i==3)
         {
             cout<<"* Lunch *"<<endl<<endl;
             hh++;
         }
-        if(i%(_lektioner.size()/5)==0)
+        if(i%(_klass.lektioner.size()/5)==0)
         {
             cout<<endl<<"Dag: "<<j+1<<endl<<endl;
             j++;
@@ -63,11 +65,11 @@ void schema::displaySchema(vector<kurs*> _lektioner)
             hh++;
             mm--;
         }
-        _lektioner[i] ->knamnOut();
+        _klass.lektioner[i].knamnOut();
     }
 }
 
-vector<kurs*> schema::createLektioner(vector<kurs*> _kurser, vector<kurs*> _lektioner)
+klass schema::createLektioner(vector<kurs*> _kurser, klass _klass)
 {
     int dag = 0;
     srand(time(NULL));
@@ -77,7 +79,7 @@ vector<kurs*> schema::createLektioner(vector<kurs*> _kurser, vector<kurs*> _lekt
         int lektion = 0;
         while(lektion<5){
             int randomIndex = rand()% _kurser.size() + 0;
-            for(int i =0;i<used.size();){
+            for(unsigned int i =0;i<used.size();){
                 if(randomIndex==used[i]){
                     randomIndex = rand()% _kurser.size() + 0;
                     i=0;
@@ -85,31 +87,47 @@ vector<kurs*> schema::createLektioner(vector<kurs*> _kurser, vector<kurs*> _lekt
                 else
                     i++;
             }
-            _lektioner.push_back(_kurser[randomIndex]);
+            _klass.lektioner.push_back(*_kurser[randomIndex]);
             used.push_back(randomIndex);
             lektion++;
         }
         dag++;
     }
-    return _lektioner;
+    return _klass;
 }
 
 
-vector<kurs*> schema::addLarare(vector<kurs*> _lektioner, vector<larare*> _larar)
+vector<kurs> schema::addLarare(vector<kurs> _lektioner, vector<larare*> _larar)
 {
     for(unsigned int i=0;i<_lektioner.size();i++){
+        vector<larare*> hold;
         for(unsigned int j=0;j<_larar.size();j++){
             for(unsigned int z=0; z <_larar[j] -> kurser.size();z++){
-                if(_lektioner[i] -> kursnamn == _larar[j] -> kurser[z]){
-                    _lektioner[i] -> addLarare(_larar[j]);
-                    break;
+                if(_lektioner[i].kursnamn == _larar[j] -> kurser[z]){
+                    hold.push_back(_larar[j]);
                 }
             }
+        }
+        if(hold.size()>1){
+            int z = 0;
+            for(unsigned int j = 1;j<hold.size();j++){
+                if(hold[j]->lek < hold[j-1]->lek){
+                    z = j;
+                }
+                else if(hold[j]->lek == hold[j-1]->lek){
+                    z = rand()% j + (j-1);
+                }
+            }
+            hold[z] -> lek+=1;
+            _lektioner[i].addLarare(hold[z]);
+        }
+        else{
+            _lektioner[i].addLarare(hold[0]);
         }
     }
     return _lektioner;
 }
-vector<kurs*> schema::shuffle(vector<kurs*> lektion)
+vector<kurs> schema::shuffle(vector<kurs> lektion)
 {
     int dag =0;
     srand(time(NULL));
@@ -124,7 +142,7 @@ vector<kurs*> schema::shuffle(vector<kurs*> lektion)
             }
             randomIndex1+= dag*5;
             randomIndex2+= dag*5;
-            kurs* hold = lektion[randomIndex1];
+            kurs hold = lektion[randomIndex1];
             lektion[randomIndex1] = lektion[randomIndex2];
             lektion[randomIndex2] = hold;
         }

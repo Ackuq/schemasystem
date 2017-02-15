@@ -7,6 +7,7 @@
 #include <vector>
 #include "kurs.h"
 #include "larare.h"
+#include "klass.h"
 
 class schema
 {
@@ -16,11 +17,11 @@ private:
 
 public:
     schema();
-    void displaySchema(vector<kurs*>);
+    void displaySchema(klass);
     void displayTime();
-    vector<kurs*> createLektioner(vector<kurs*>, vector<kurs*>);
-    vector<kurs*> shuffle(vector<kurs*>);
-    vector<kurs*> addLarare(vector<kurs*>, vector<larare*>);
+    klass createLektioner(vector<kurs*>, klass);
+    vector<kurs> shuffle(vector<kurs>);
+    vector<kurs> addLarare(vector<kurs>, vector<larare*>);
     virtual ~schema();
 };
 

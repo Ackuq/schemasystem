@@ -1,70 +1,79 @@
 # depslib dependency file v1.0
-1485291660 source:c:\github\schemasystem\main.cpp
+1487162976 source:c:\github\schemasystem\main.cpp
 	<iostream>
 	<string>
 	<cstdlib>
 	<vector>
+	<time.h>
 	"person.h"
 	"elev.h"
 	"larare.h"
 	"klass.h"
 	"kurs.h"
-	"schema.h"
 
-1485280887 c:\github\schemasystem\include\person.h
+1485344665 c:\github\schemasystem\include\person.h
 	<iostream>
 	<cstdlib>
 
-1485280324 c:\github\schemasystem\include\elev.h
+1484252522 c:\github\schemasystem\include\elev.h
 	<iostream>
 	<string>
 	"person.h"
 
-1485281340 c:\github\schemasystem\include\larare.h
+1485369623 c:\github\schemasystem\include\larare.h
 	<iostream>
 	<cstdlib>
 	<vector>
 	"person.h"
 
-1485280715 c:\github\schemasystem\include\klass.h
+1487162866 c:\github\schemasystem\include\klass.h
 	"elev.h"
+	"kurs.h"
 	<vector>
 
-1485280324 c:\github\schemasystem\include\kurs.h
+1485369237 c:\github\schemasystem\include\kurs.h
 	<vector>
 	"elev.h"
 	"larare.h"
 
-1485280324 source:c:\github\schemasystem\src\elev.cpp
+1484250138 source:c:\github\schemasystem\src\elev.cpp
 	"elev.h"
 	<string>
 
-1485280324 source:c:\github\schemasystem\src\klass.cpp
+1486558125 source:c:\github\schemasystem\src\klass.cpp
 	"klass.h"
-
-1485280324 source:c:\github\schemasystem\src\kurs.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<time.h>
 	"kurs.h"
 
-1485281468 source:c:\github\schemasystem\src\larare.cpp
+1485369355 source:c:\github\schemasystem\src\kurs.cpp
+	"kurs.h"
+
+1485898162 source:c:\github\schemasystem\src\larare.cpp
 	"larare.h"
 	<string>
 
-1485280324 source:c:\github\schemasystem\src\person.cpp
+1484256155 source:c:\github\schemasystem\src\person.cpp
 	"person.h"
 
 1484779707 c:\github\schemasystem\include\lektioner.h
 
 1484778471 c:\github\schemasystem\include\tid.h
 
-1485280687 c:\github\schemasystem\include\schema.h
+1485353344 c:\github\schemasystem\include\schema.h
 	<iostream>
 	<string>
 	<cstdlib>
 	<vector>
 	"kurs.h"
 	"larare.h"
+	"klass.h"
 
-1485292217 source:c:\github\schemasystem\src\schema.cpp
+1485353449 source:c:\github\schemasystem\src\schema.cpp
 	"schema.h"
 	<iostream>
 	<string>
@@ -72,5 +81,6 @@
 	<vector>
 	<sstream>
 	<time.h>
+	"klass.h"
 	"kurs.h"
 
